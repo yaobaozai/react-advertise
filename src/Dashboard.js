@@ -29,8 +29,8 @@ class Dashboard extends React.Component{
                     </li>
                 </ul>
                 <Route path="/dashboard/" exact component={App}></Route>
-                <Route path="/dashboard/erying" exact component={Erying}></Route>
-                <Route path="/dashboard/qibinglian" exact component={Qibinglian}></Route>
+                <Route path="/dashboard/erying" exact  component={Erying}></Route>
+                <Route path="/dashboard/qibinglian" exact  component={Qibinglian}></Route>
 
             </div>
         )

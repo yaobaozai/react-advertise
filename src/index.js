@@ -11,14 +11,17 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom'
-import { counter } from './index.redux'
+// import { counter } from './index.redux'
 import Dashboard from './Dashboard'
 import Auth  from './Auth'
+import reducers from './reducer'
 
-const store = createStore(counter, compose(
+const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
+
+console.log(store.getState())
 
 ReactDom.render(
     (<Provider store={store}>
