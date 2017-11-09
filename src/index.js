@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import App from './App'
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import {
     BrowserRouter,
     Route,
-    Link,
     Redirect,
     Switch
 } from 'react-router-dom'
@@ -15,13 +13,14 @@ import {
 import Dashboard from './Dashboard'
 import Auth  from './Auth'
 import reducers from './reducer'
+import './config'
 
 const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
 
-console.log(store.getState())
+// console.log(store.getState())
 
 ReactDom.render(
     (<Provider store={store}>
@@ -34,7 +33,7 @@ ReactDom.render(
                     <Redirect to="/dashboard"></Redirect>
                 </Switch>
 
-                <Redirect to="/"></Redirect>
+                {/* <Redirect to="/dashboard"></Redirect> */}
             </div>
 
         </BrowserRouter>

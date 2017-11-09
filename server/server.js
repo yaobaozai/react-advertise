@@ -21,8 +21,8 @@ const User = mongoose.model('user', new mongoose.Schema({
     }else {
         console.log(err)
     }
-})
- */
+}) */
+
 // 新建app
 // User.update({'user': 'renmengfei'}, {'$set':{age:25}}, function(err,doc){
 //     console.log(doc)

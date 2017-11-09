@@ -102,9 +102,7 @@
           "style": "css"
         }
       ],
-      [
         "transform-decorators-legacy"
-      ]
     ]
   },
   "eslintConfig": {
