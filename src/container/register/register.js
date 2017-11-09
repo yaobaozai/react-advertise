@@ -1,15 +1,15 @@
 import React from 'react'
 import Logo from '../../component/logo/logo'
 
-class Login extends React.Component {
+class Register extends React.Component {
     render() {
         return (
             <div>
                 <Logo></Logo>
-                <h2>登录页</h2>
+                <h2>注册页</h2>
             </div>
         )
     }
 }
 
-export default Login
+export default Register

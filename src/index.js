@@ -9,31 +9,22 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom'
-// import { counter } from './index.redux'
-import Dashboard from './Dashboard'
-import Auth  from './Auth'
 import reducers from './reducer'
 import './config'
+import Login from './container/login/login'
+import Register from './container/register/register'
 
 const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
 
-// console.log(store.getState())
-
 ReactDom.render(
     (<Provider store={store}>
         <BrowserRouter>
             <div>
-                <Switch>
-                    {/* 只渲染命中的第一个Route */}
-                    <Route path="/login" component={Auth}></Route> 
-                    <Route path="/dashboard" component={Dashboard}></Route>
-                    <Redirect to="/dashboard"></Redirect>
-                </Switch>
-
-                {/* <Redirect to="/dashboard"></Redirect> */}
+                <Route path="/login" component={Login}></Route> 
+                <Route path="/register" component={Register}></Route> 
             </div>
 
         </BrowserRouter>
