@@ -19,7 +19,7 @@ const store = createStore(reducers, compose(
     applyMiddleware(thunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f
 ))
-function Boss(){
+function Boss() {
     return <h2>boss</h2>
 }
 
@@ -29,8 +29,8 @@ ReactDom.render(
             <div>
                 <AuthRoute></AuthRoute>
                 <Route path="/boss" component={Boss}></Route>
-                <Route path="/login" component={Login}></Route> 
-                <Route path="/register" component={Register}></Route> 
+                <Route path="/login" component={Login}></Route>
+                <Route path="/register" component={Register}></Route>
             </div>
 
         </BrowserRouter>
